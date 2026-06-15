@@ -16,7 +16,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ["http://localhost:5173", "https://artiqs-drab.vercel.app/"], // <-- Put your exact Vercel URL here
+  origin: [
+    "http://localhost:5173", 
+    "https://artiqs-drab.vercel.app" // Your exact Vercel frontend URL
+  ],
   credentials: true
 })); // Allows your React frontend to communicate with this API
 app.use(express.json()); // Allows the server to accept JSON data in the body
