@@ -18,7 +18,7 @@ const ImageGenerator = () => {
     setImageUrl('');
 
     try {
-      const response = await axios.post('http://localhost:5000/api/image/generate', {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/image/generate`, {
         userId: user._id,
         prompt: prompt
       });
