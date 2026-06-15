@@ -22,7 +22,7 @@ const PricingPage = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
 
       // Tell backend how many credits to add
-      const response = await axios.post('http://localhost:5000/api/payment/verify', {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/payment/verify`, {
         creditsToAdd: plan.credits
       });
 
